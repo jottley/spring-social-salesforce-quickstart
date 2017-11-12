@@ -18,6 +18,7 @@
       <dependency>
         <groupId>org.springframework.social</groupId>
         <artifactId>spring-social-salesforce</artifactId>
+      </dependency
     </dependencies>
 
     <build>
