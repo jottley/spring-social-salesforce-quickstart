@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Hello Salesforce</title>
+	</head>
+	<body>
+		<h3>Connect to Salesforce</h3>
+		<span th:if="${social_provider_error}">Provider error (maybe you need to configure the app id and secret?)</span>
+		<form action="/connect/salesforce" method="POST">
+			<div class="formInfo">
+				<p>You aren't connected to Salesforce yet. Click the button to connect this application with your Salesforce account.</p>
+			</div>
+			<p><button type="submit">Connect to Salesforce</button></p>
+		</form>
+	</body>
+</html>

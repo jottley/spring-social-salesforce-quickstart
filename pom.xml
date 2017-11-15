@@ -1,40 +1,64 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.springframework.social</groupId>
-    <artifactId>spring-social-salesforce-quickstart</artifactId>
-    <version>1.2.0.BUILD-SNAPSHOT</version>
-    <packaging>jar</packaging>
+	<groupId>org.springframework.social</groupId>
+	<artifactId>spring-social-salesforce-quickstart</artifactId>
+	<version>1.2.0.BUILD-SNAPSHOT</version>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.8.RELEASE</version>
-    </parent>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.8.RELEASE</version>
+	</parent>
 
-    <name>spring-social-salesforce-quickstart</name>
-    <url>https://github.com/jottley/spring-social-salesforce-quickstart</url>
+	<name>spring-social-salesforce-quickstart</name>
+	<url>https://github.com/jottley/spring-social-salesforce-quickstart</url>
 
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-thymeleaf</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.social</groupId>
-        <artifactId>spring-social-salesforce</artifactId>
-        <version>1.2.0.BUILD-SNAPSHOT</version>
-    </dependency>
-    </dependencies>
+	<properties>
+		<java.version>1.8</java.version>
+		<salesforce.version>1.2.0.BUILD-SNAPSHOT</salesforce.version>
+		<inject.version>1</inject.version>
+	</properties>
 
-    <build>
-      <plugins>
-        <plugin>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
-      </plugins>
-    </build>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-salesforce</artifactId>
+			<version>${salesforce.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>${inject.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
 </project>

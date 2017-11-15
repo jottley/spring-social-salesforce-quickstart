@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Hello Salesforce</title>
+	</head>
+	<body>
+		<h3 th:text="'Hello, ' + ${salesforceUserDetails.name} + '!'"></h3>
+		<table>
+			<tr>
+				<td>User Id</td>
+				<td th:text="${salesforceUserDetails.id}"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td th:text="${salesforceUserDetails.email}"></td>
+			</tr>
+			<tr>
+				<td>Nickname</td>
+				<td th:text="${salesforceUserDetails.nickname}"></td>
+			</tr>
+			<tr>
+				<td>Preferred Username</td>
+				<td th:text="${salesforceUserDetails.preferredUsername}"></td>
+			</tr>
+			<tr>
+				<td>Org Id</td>
+				<td th:text="${salesforceUserDetails.organizationId}"></td>
+			</tr>
+		</table>
+	</body>
+</html>
